@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Visual Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 25px 0 15px;
+            color: #1a2a6c;
+            border-bottom: 2px solid #fdbb2d;
+            padding-bottom: 8px;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 20px 0 10px;
+            color: #b21f1f;
+        }
+        
+        .intro {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .grid-cheatsheet {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .controls {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .control-group {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #1a2a6c;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1a2a6c;
+        }
+        
+        select, input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .visualization {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .grid-container {
+            flex-grow: 1;
+            display: grid;
+            gap: 10px;
+            padding: 15px;
+            background-color: #f0f2f5;
+            border: 2px dashed #1a2a6c;
+            border-radius: 8px;
+            min-height: 400px;
+        }
+        
+        .grid-item {
+            background-color: #1a2a6c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .code-display {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .concepts {
+            grid-column: 1 / -1;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .concept-card {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-top: 4px solid #fdbb2d;
+        }
+        
+        .concept-card h4 {
+            color: #1a2a6c;
+            margin-bottom: 10px;
+        }
+        
+        .property {
+            display: inline-block;
+            background-color: #1a2a6c;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid-cheatsheet {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style> -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSS Grid Visual Cheat Sheet</h1>
+            <p>Interactive guide to understanding CSS Grid Layout</p>
+        </header>
+        
+        <section class="intro">
+            <h2>What is CSS Grid?</h2>
+            <p>CSS Grid Layout is a powerful 2-dimensional layout system for the web. It lets you create complex web layouts with rows and columns, making it much easier to design responsive pages without using floats or positioning.</p>
+        </section>
+        
+        <div class="grid-cheatsheet">
+            <section class="controls">
+                <h2>Grid Controls</h2>
+                
+                <div class="control-group">
+                    <h3>Grid Template</h3>
+                    <label for="grid-template-columns">grid-template-columns</label>
+                    <input type="text" id="grid-template-columns" value="1fr 1fr 1fr" placeholder="e.g., 1fr 1fr 1fr">
+                    
+                    <label for="grid-template-rows">grid-template-rows</label>
+                    <input type="text" id="grid-template-rows" value="100px 150px 100px" placeholder="e.g., 100px 150px">
+                </div>
+                
+                <div class="control-group">
+                    <h3>Gap</h3>
+                    <label for="gap">gap</label>
+                    <input type="text" id="gap" value="10px" placeholder="e.g., 10px">
+                    
+                    <label for="column-gap">column-gap</label>
+                    <input type="text" id="column-gap" value="" placeholder="e.g., 20px">
+                    
+                    <label for="row-gap">row-gap</label>
+                    <input type="text" id="row-gap" value="" placeholder="e.g., 15px">
+                </div>
+                
+                <div class="control-group">
+                    <h3>Alignment</h3>
+                    <label for="justify-content">justify-content</label>
+                    <select id="justify-content">
+                        <option value="start">start</option>
+                        <option value="end">end</option>
+                        <option value="center">center</option>
+                        <option value="stretch" selected>stretch</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                    
+                    <label for="align-content">align-content</label>
+                    <select id="align-content">
+                        <option value="start">start</option>
+                        <option value="end">end</option>
+                        <option value="center">center</option>
+                        <option value="stretch" selected>stretch</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Item Placement</h3>
+                    <label for="item-column">Selected Item: Column (grid-column)</label>
+                    <input type="text" id="item-column" value="auto" placeholder="e.g., 1 / 3">
+                    
+                    <label for="item-row">Selected Item: Row (grid-row)</label>
+                    <input type="text" id="item-row" value="auto" placeholder="e.g., 2 / 4">
+                    
+                    <label for="item-justify">Selected Item: justify-self</label>
+                    <select id="item-justify">
+                        <option value="stretch" selected>stretch</option>
+                        <option value="start">start</option>
+                        <option value="end">end</option>
+                        <option value="center">center</option>
+                    </select>
+                    
+                    <label for="item-align">Selected Item: align-self</label>
+                    <select id="item-align">
+                        <option value="stretch" selected>stretch</option>
+                        <option value="start">start</option>
+                        <option value="end">end</option>
+                        <option value="center">center</option>
+                    </select>
+                </div>
+            </section>
+            
+            <section class="visualization">
+                <h2>Grid Visualization</h2>
+                <p>Adjust the controls to see how properties affect the grid layout.</p>
+                
+                <div class="grid-container" id="grid-container">
+                    <div class="grid-item" data-item="1">1</div>
+                    <div class="grid-item" data-item="2">2</div>
+                    <div class="grid-item" data-item="3">3</div>
+                    <div class="grid-item" data-item="4">4</div>
+                    <div class="grid-item" data-item="5">5</div>
+                    <div class="grid-item" data-item="6">6</div>
+                </div>
+                
+                <div class="code-display" id="css-code">
+                    /* Generated CSS will appear here */
+                </div>
+            </section>
+        </div>
+        
+        <section class="concepts">
+            <h2>Key Grid Concepts</h2>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h4>Grid Container & Items</h4>
+                    <p>The element with <span class="property">display: grid</span> becomes a grid container. Its direct children automatically become grid items.</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Grid Lines</h4>
+                    <p>The dividing lines that make up the grid structure. They are numbered starting from 1, or from the end with negative numbers.</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Grid Tracks</h4>
+                    <p>The space between two adjacent grid lines (rows or columns). You define these with <span class="property">grid-template-rows</span> and <span class="property">grid-template-columns</span>.</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Grid Cells & Areas</h4>
+                    <p>A grid cell is a single unit. A grid area is a rectangular area made up of multiple cells, defined by four grid lines.</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>fr Unit</h4>
+                    <p>The fractional unit (<span class="property">fr</span>) represents a fraction of the available space in the grid container. It distributes space proportionally.</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>Implicit vs Explicit Grid</h4>
+                    <p>The explicit grid is defined with template properties. The implicit grid is created automatically when items are placed outside the explicit grid.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+<!-- 
+    <script>
+        // Get all control elements
+        const gridTemplateColumns = document.getElementById('grid-template-columns');
+        const gridTemplateRows = document.getElementById('grid-template-rows');
+        const gap = document.getElementById('gap');
+        const columnGap = document.getElementById('column-gap');
+        const rowGap = document.getElementById('row-gap');
+        const justifyContent = document.getElementById('justify-content');
+        const alignContent = document.getElementById('align-content');
+        const itemColumn = document.getElementById('item-column');
+        const itemRow = document.getElementById('item-row');
+        const itemJustify = document.getElementById('item-justify');
+        const itemAlign = document.getElementById('item-align');
+        
+        // Get the grid container and items
+        const gridContainer = document.getElementById('grid-container');
+        const gridItems = document.querySelectorAll('.grid-item');
+        const cssCode = document.getElementById('css-code');
+        
+        // Track the currently selected item
+        let selectedItem = gridItems[0];
+        
+        // Initialize with first item selected
+        selectedItem.style.backgroundColor = '#b21f1f';
+        
+        // Function to update the grid based on control values
+        function updateGrid() {
+            // Update grid container properties
+            gridContainer.style.gridTemplateColumns = gridTemplateColumns.value;
+            gridContainer.style.gridTemplateRows = gridTemplateRows.value;
+            
+            // Handle gap properties
+            if (gap.value) {
+                gridContainer.style.gap = gap.value;
+            }
+            
+            if (columnGap.value) {
+                gridContainer.style.columnGap = columnGap.value;
+            }
+            
+            if (rowGap.value) {
+                gridContainer.style.rowGap = rowGap.value;
+            }
+            
+            gridContainer.style.justifyContent = justifyContent.value;
+            gridContainer.style.alignContent = alignContent.value;
+            
+            // Update selected item properties
+            selectedItem.style.gridColumn = itemColumn.value;
+            selectedItem.style.gridRow = itemRow.value;
+            selectedItem.style.justifySelf = itemJustify.value;
+            selectedItem.style.alignSelf = itemAlign.value;
+            
+            // Update the CSS code display
+            updateCodeDisplay();
+        }
+        
+        // Function to update the CSS code display
+        function updateCodeDisplay() {
+            let code = `.grid-container {\n`;
+            code += `  display: grid;\n`;
+            code += `  grid-template-columns: ${gridTemplateColumns.value || 'none'};\n`;
+            code += `  grid-template-rows: ${gridTemplateRows.value || 'none'};\n`;
+            
+            if (gap.value) code += `  gap: ${gap.value};\n`;
+            if (columnGap.value) code += `  column-gap: ${columnGap.value};\n`;
+            if (rowGap.value) code += `  row-gap: ${rowGap.value};\n`;
+            
+            code += `  justify-content: ${justifyContent.value};\n`;
+            code += `  align-content: ${alignContent.value};\n`;
+            code += `}\n\n`;
+            
+            code += `.grid-item:nth-child(${selectedItem.dataset.item}) {\n`;
+            code += `  grid-column: ${itemColumn.value};\n`;
+            code += `  grid-row: ${itemRow.value};\n`;
+            code += `  justify-self: ${itemJustify.value};\n`;
+            code += `  align-self: ${itemAlign.value};\n`;
+            code += `}`;
+            
+            cssCode.textContent = code;
+        }
+        
+        // Add event listeners to all controls
+        const controls = [
+            gridTemplateColumns, gridTemplateRows, gap, columnGap, rowGap,
+            justifyContent, alignContent, itemColumn, itemRow, itemJustify, itemAlign
+        ];
+        
+        controls.forEach(control => {
+            control.addEventListener('input', updateGrid);
+        });
+        
+        // Add click event listeners to grid items for selection
+        gridItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // Reset background of previously selected item
+                selectedItem.style.backgroundColor = '#1a2a6c';
+                
+                // Set new selected item
+                selectedItem = this;
+                selectedItem.style.backgroundColor = '#b21f1f';
+                
+                // Update item-specific controls
+                itemColumn.value = this.style.gridColumn || 'auto';
+                itemRow.value = this.style.gridRow || 'auto';
+                itemJustify.value = this.style.justifySelf || 'stretch';
+                itemAlign.value = this.style.alignSelf || 'stretch';
+                
+                updateCodeDisplay();
+            });
+        });
+        
+        // Initialize the grid
+        updateGrid();
+    </script> -->
+    <script src="script.js"></script>
+</body>
+</html>
